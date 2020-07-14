@@ -1,4 +1,4 @@
-$primary: #18191b;
+$primary: #000000;
 $light: rgb(255, 255, 255);
 $secondary:rgb(124, 81, 134) ;
 
@@ -9,7 +9,6 @@ body{
     color: $light;
     background-color: $primary;
     margin: 0;
-    padding-top: 130px;
     width: 100vw;
     overflow-x: hidden;
     h1{
@@ -78,11 +77,31 @@ body{
     }  
 // Aqui termina el header
     main{
-        height: 560px;
-        padding-left: 20vw;
-        padding-right: 20vw;
-        
+        height: 690px;
+        display: flex;
+        flex-direction: column;
+        }
+        .img-container{
+            position:relative;
+            width:inherit;
+            height:inherit;
+            background-image: url(../images/forza-bg.webp);
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .dark{
+            position:absolute;
+            z-index:2;
+            top:0;
+            width:100vw;
+            height:inherit;
+            background-color: rgba(0, 0, 0, 0.822);
+        }
         .first-sight{
+            align-self:center;
+            position: absolute;
+            z-index:3;
+            top:150px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 70% 10% 10% 10%;
@@ -298,6 +317,7 @@ body{
         margin-bottom: 60px;
     }
     .genres{
+        padding-top: 70px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -338,53 +358,259 @@ body{
     }
     // Aqui terminan los estilos de los juegos y empieza el de News!!
     //Aqui empieza NEWS
-    .news-card {
-        display: flex;
+    .titlenews{
+        margin-top: 120px;
+    }
+    .top-news{
+        display:flex;
         flex-direction: row;
-        margin: 1rem auto;
-        margin-left: 40px;
-        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
-        margin-bottom: 1.6%;
-        background: rgb(255, 255, 255);
-        color: $secondary;
-        line-height: 1.4;
-        border-radius: 5px;
-        overflow: hidden;
-        z-index: 0;
-        max-width: 800px;
-        
-        img{
-            width: 300px;
+        justify-content: space-evenly;
+        padding:1rem auto;
+        .tn-1{
+            img{
+                height:400px;
+                width:600px;
+                border-radius:10px;
+            } 
+            .title{
+                position:relative;
+                left:100px;
+                bottom:70px;
+                a{
+                    color:rgb(0, 0, 0);
+                }
+            }
+        }
+        .tn-2{
+            img{
+                
+                height:400px;
+                width:600px;
+                border-radius:10px;
+            }
+            .title{
+                position:relative;
+                left:20px;
+                bottom:70px;
+                a{
+                    color:rgb(255, 255, 255);
+                }
+            }
         }
     }
+    .news-row{
+        max-width:80%;
+        padding-left:10%;
+        padding-right: 10%;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        .second-news-1{
+            width:250px;
+            height:150px;
+            background-image:url(../images/fortnite-new-min.jpg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min($numbers: 300px);
+            .news-short{
+                color:rgb(255, 255, 255);
+                margin-top:120px;
+                h3{
+                    display: block;
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .second-news-2{
+            width:250px;
+            height:150px;
+            background-image:url(../images/league-legends-news.png) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min($numbers: 300px);
+            .news-short{
+                color:rgb(255, 255, 255);
+                margin-top:120px;
+                h3{
+                    display: block;
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            }
+        }
+        .second-news-3{
+            width:250px;
+            height:150px;
+            background-image:url(../images/ps5-black-new-min.jpg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min($numbers: 300px);
+            .news-short{
+                color:rgb(255, 255, 255);
+                margin-top:120px;
+                h3{
+                    display: block;
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .second-news-4{
+            width:250px;
+            height:150px;
+            background-image:url(../images/gta-v-news-min.jpg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: min($numbers: 300px);
+            .news-short{
+                color:rgb(255, 255, 255);
+                margin-top:120px;
+                h3{
+                    display: block;
+                    width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
     
-    .news-card-2 {
+    .second-container{
         display: flex;
-        flex-direction: row;
-        margin: 1rem auto;
-        margin-right: 40px;
-        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
-        margin-bottom: 1.6%;
-        background: rgb(255, 255, 255);
-        color: $secondary;
-        line-height: 1.4;
-        border-radius: 5px;
-        overflow: hidden;
-        max-width: 800px;
-        
-        img{
-            width: 300px;
+        flex-direction:row;
+        justify-content:space-between;
+        padding:30px;
+        padding-bottom: 70px;
+        .container-news{
+            padding-top: 50px;
+            h2{
+                text-align: left;
+                padding-left: 40px;
+            }
+            .news-card {
+                display: flex;
+                flex-direction: row;
+                margin: 1rem auto;
+                margin-left: 40px;
+                box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
+                margin-bottom: 1.6%;
+                background: rgb(255, 255, 255);
+                color: $secondary;
+                line-height: 1.4;
+                border-radius: 5px;
+                overflow: hidden;
+                z-index: 0;
+                max-width: 800px;
+                
+                img{
+                    width: 300px;
+                }
+            }
+        }
+        .recommended{
+            padding-top: 50px;    
+            display:flex;
+            flex-direction: column;
+            align-items: center;   
+            width:300px;
+            margin: 1rem auto;
+            .recommended-content-1{
+                background-image:url(../images/lastofus-rec.webp) ;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: min($numbers: 370px);
+            }
+            .recommended-content-2{
+                background-image: url(../images/cyberpunk-rec-min.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: min($numbers: 370px);
+            }
+            .recommended-content-3{
+                background-image: url(../images/destiny-rec-min.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: min($numbers: 370px);
+            }
+            .review{
+                width:300px;
+                height:200px;
+                display:flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                strong{
+                    color: rgb(255, 255, 255);
+                }
+            }
+
         }
     }
-    // aqui terminan las new y comienza las seccion de suscribite
-        
+    // aqui terminan las news y comienza las seccion de suscribite
+     .description{
+         padding-top:60px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: stretch;
+         background-color: rgba(7, 6, 6, 0.863);
+         .info{
+             display: flex;
+             flex-direction: column;
+             padding:50px;
+             padding-top: 20px;
+             h1{
+                 text-align: left;
+             }  
+            .sus-btn {
+                background-color:$secondary;
+                border-radius:4px;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:13px;
+                font-weight:bold;
+                padding:6px 12px;
+                text-decoration:none;
+                width: 170px;
+                padding:10px;
+                } 
+         } 
+         .img-height{
+                 height: 473px;
+             }
+     } 
+     .perks{
+         display:flex;
+         flex-direction: row;
+         justify-content: space-around;
+         background-color: rgb(24, 23, 26);
+         .perk-description{
+            text-align: center;
+            max-width: 300px;
+            margin: 1rem auto;
+             i{
+                 color: $secondary;
+                 font-size: 30px;
+             }
+         }
+     } 
+
     .suscards-container{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         max-width: 1000px;
         margin: 1rem auto;
-        .card {
+        .card{
             text-decoration: none;
             color:$secondary;
             max-width: 300px;
@@ -396,17 +622,42 @@ body{
             box-shadow: 0 1px 3px rgba(44, 46, 65, .15);
             transition: all .3s ease-in-out;
             overflow: hidden;
-
+            -webkit-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.55);
+            -moz-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.55);
+            box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.55);
             
-            header {
-            padding-bottom: 90%;
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            background-image: url(..//images/purpleLogo.png);
-            background-size: cover;
-            background-position: center;
+            .card-1 {
+                padding-bottom: 90%;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                background-image: url(..//images/solo-gamer-min.crop.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
+
+            .card-2 {
+                padding-bottom: 90%;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                background-image: url(..//images/couple-gamer-min.crop.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                }
+
+            .card-3 {
+                padding-bottom: 90%;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                background-image: url(..//images/family-gamers.webp);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }    
             
             .content {
             left: 0;
@@ -466,31 +717,154 @@ body{
         }
 
     }
+// aqui termina suscribite y empieza login
+    
+    .login-bg{
+        height: 100vh;
+        width: 100vw;
+        background-image:url(../images/cyberpunk-bg-min.jpg);
+        background-repeat: no-repeat;
 
-    .registrate{
-        width:300px ;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: column;
-        align-content: space-evenly;
-        border: solid 2px $light;
-        border-radius: 10px;
-        padding: 1rem auto;
-        margin-bottom: 30px;
-        div{
-            padding:20px;
-            max-width: 200;
-            margin: 1rem auto;
-            h2{
-                text-align: center;
-                font-size:20px;
-                font-weight: lighter;
+        .darken-login{
+            width:inherit;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.856);
+            position:absolute;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            
+            .login-container{
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:space-around ;
+                position:absolute;
+                z-index: 3;
+                margin-top: 100px;
+                height:500px;
+                width:400px;
+                border-radius: 10px;
+                background-image: linear-gradient(to bottom right, rgb(103, 73, 185),rgb(168, 92, 179),rgb(230, 119, 230));
+                .img-login{
+                    width: 50px;
+                }
+                h1{
+                    font-size: 25px;
+                    margin-bottom:0px;
+                }
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    i{
+
+                    }
+                    input{
+                        border: none;
+                        border-bottom: solid 1px $light;
+                        background-color: rgba(255, 255, 255, 0);
+                        color: $light;
+                        &:focus{
+                            outline: none;
+                        }
+                        &::placeholder{
+                            color:$light;
+                            opacity: 50%;
+                        }
+                    }
+                }
+                .login-btn{
+                    text-align: center;
+                    background-color:$light;
+                    border-radius:4px;
+                    display:inline-block;
+                    cursor:pointer;
+                    color:$secondary;
+                    font-family:Arial;
+                    font-size:13px;
+                    font-weight:bold;
+                    padding:6px 12px;
+                    text-decoration:none;
+                    width: 100px;
+                    padding:10px;
+                }
+                a{
+                    color: $light;
+                    font-weight: bold;
+                }
             }
-            input{
-                max-width: 200px;
+            form{
+                padding-top: 50px;
+                position: absolute;
+                z-index: 3;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width:900px;
+                height:inherit;
+                color:$light;
+                .form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: inherit;
+                    input{
+                        background-color:rgba(255, 255, 255, 0);
+                        border: none;
+                        border-bottom: 1px solid $secondary;
+                        font-size: 16px;
+                        font-weight: lighter;
+                        color: $light;
+                        font-family: 'Muli',sans-serif;
+                        &:focus{
+                            outline: none;
+                        }
+                        &::placeholder{
+                            font-weight:lighter ;
+                            font-family: 'Muli', sans-serif;
+                            color: $light;
+                            opacity: 75%;
+                        }
+                    }
+                    select{
+                        background-color:rgba(255, 255, 255, 0);
+                        border: none;
+                        border-bottom: 1px solid $secondary;
+                        font-size: 16px;
+                        font-weight: lighter;
+                        color: $light;
+                        font-family: 'Muli',sans-serif;
+                        &:focus{
+                            outline: none;
+                        }
+                        &::placeholder{
+                            font-weight:lighter ;
+                            font-family: 'Muli', sans-serif;
+                            color: $light;
+                            opacity: 75%;
+                        }
+                        option{
+                            background-color: $primary;
+                        }
+                    }
+                    button{
+                        background-color: $secondary;
+                        width:100px;
+                        color: $light;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 5px;
+                        align-self: center;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }   
             }
-        }  
+                
+        }
     }
+        
 
 
 
@@ -519,23 +893,44 @@ body{
 
 
     }
-}
- // Efectos del menu 
+
+ // Efectos y animaciones
  .headroom{
     transition: transform .3s ease;
     &.headroom--pinned{
+        position: absolute;
+        z-index: 100000;
         transform: translateY(0%);
     }
     &.headroom--unpinned{
         transform: translateY(-100%);
+        position: absolute;
+        z-index: 100000;
     }
-
+    &.headroom--top{
+        position: absolute;
+        z-index: 100000;
+    }
+    &.headroom--not-top{
+        position: absolute;
+        z-index: 100000;
+    }
+    &.headroom--bottom{
+        position: absolute;
+        z-index: 100000;
+    }
+    &.headroom--bottom{
+        position: absolute;
+        z-index: 100000;
+    }
 }
+
+
 
 // Mediaquerys
 @media (max-width: 1000px) {
     body{
-        padding-top: 100px;
+        padding-top:0px;
         // Header, barra navegadora
         #header{
             .menu{
@@ -577,7 +972,11 @@ body{
 
         // Aqui empieza Main
         main{
+            padding-top: 100px;
             height: 700;
+            .dark{
+                height: inherit;
+            }
             .first-sight{
                 h2{
                     font-weight: normal !important;
@@ -618,10 +1017,10 @@ body{
             height: auto;
             width: 100vw;
             padding-bottom: 15px;
-            padding-right: 5%
+            padding-right: 5%;
             
             h2{
-                margin: 0;
+                height: auto;
                 text-align: center;
                 font-size: 35px;
                 align-self: center;
@@ -658,9 +1057,11 @@ body{
 
         // seccion de juegos
         h1{
+            padding-top: 50px;
             font-size: 30px;
         }
         .genres{
+            padding-top: 0;
             display: flex;
             flex-direction: column;
             align-content: center;
@@ -676,70 +1077,91 @@ body{
             }
         }
 
-        .news-card {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem auto;
-            width: auto;
-            
-            img{
-                width: 300px;
-            }
-        }
+              
         
-        .news-card-2 {
-            display: flex;
-            flex-direction: column;
-            margin: 1rem auto;
-            width:auto
-            
-            img{
-                width: 300px;
-            }
-        }        
-        
-        // aqui terminan los estilos de las noticias y comienzan los de suscripcion
+        // aqui terminan los estilos de las juegos y comienzan los de news
 
-        .news-card {
-            display: flex;
-            flex-direction: row;
-            margin: 1rem auto;
-            margin-left: 40px;
-            box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
-            margin-bottom: 1.6%;
-            background: rgb(255, 255, 255);
-            color: $secondary;
-            line-height: 1.4;
-            border-radius: 5px;
-            overflow: hidden;
-            z-index: 0;
-            max-width: 800px;
-            
-            img{
-                width: 300px;
+        .titlenews{
+            padding-top: 100px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .top-news{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            padding:1rem auto;
+            .tn-1{
+                img{
+                    height: 200px;
+                    width:300px;
+                    border-radius:10px;
+                } 
+                .title{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 200px;
+                    position: relative;
+                    left:0;
+                }
+            }
+            .tn-2{
+                img{
+                    height: 200px;
+                    width:300px;
+                    border-radius:10px;
+                }
+                .title{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 200px;
+                    position: relative;
+                    left:0;
+                }
             }
         }
-        
-        .news-card-2 {
-            display: flex;
-            flex-direction: row;
+        .news-row{
+            max-width:250px;
             margin: 1rem auto;
-            margin-right: 40px;
-            box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
-            margin-bottom: 1.6%;
-            background: rgb(255, 255, 255);
-            color: $secondary;
-            line-height: 1.4;
-            border-radius: 5px;
-            overflow: hidden;
-            max-width: 800px;
-            
-            img{
-                width: 300px;
+            display:flex;
+            flex-direction:column;
+            align-content: space-between;
+            justify-items: center;
+            }
+        
+        .second-container{
+            display: flex;
+            flex-direction:column;
+            align-content:space-between;
+            .container-news{
+                padding-top: 50px;
+                h2{
+                    text-align: left;
+                    padding-left: 40px;
+                }
+                .news-card {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1rem auto;
+                    
+                }
             }
         }
         // aqui terminan las new y comienza las seccion de suscribite
-            
+        .description{
+            padding-top: 100px;
+            .img-height{
+                    img{
+                        display:none
+                    }
+                }
+        } 
+        .perks{
+            display:flex;
+            flex-direction: column;
+        }
         .suscards-container{
             display: flex;
             flex-direction: column;
@@ -761,14 +1183,28 @@ body{
                 margin: 1rem auto;
 
             }
-    
         }
-
+        // aqui termina suscribite y empieza login
+        .login-bg{
+        .darken-login{
+            
+            
+            .login-container{
+                width:250px;
+            
+            }
+            form{
+                flex-direction: column;
+                max-width: 300px;
+            }
+        }
+    }
 
 
 
 
         .footer{
+            margin-top: 50px;
             height: 150px;
             width: 100vw;
             
